@@ -12,12 +12,12 @@ elem.send_keys(Keys.RETURN)
 images = driver.find_element_by_css_selector('.rg_i.Q4LuWd')
 count = 1
 img = images[0]
-# for image in images:
-#     image.click()
-#     time.sleep(5)
-#     url = driver.find_element_by_css_selector('.n3VNCb').get_attribute('src')
-#     urllib.request.urlretrieve(url, str(count) + '.jpg')
-#     count += 1
+for image in images:
+    image.click()
+    time.sleep(5)
+    url = driver.find_element_by_css_selector('.n3VNCb').get_attribute('src')
+    urllib.request.urlretrieve(url, str(count) + '.jpg')
+    count += 1
 
 # assert "Python" in driver.title
 # elem = driver.find_element(By.NAME, "q")
